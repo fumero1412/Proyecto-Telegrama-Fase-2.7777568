@@ -11,7 +11,7 @@ TOPIC = 733141
 CANAL = 'https://t.me/Horny_J'
 SESSION = os.environ.get("SESSION_STRING")
 
-app = Flask(name)
+app = Flask(__name__)
 @app.route('/')
 def home(): return "Bot vivo"
 threading.Thread(target=lambda: app.run(host='0.0.0.0', port=int(os.environ.get("PORT",10000))), daemon=True).start()
